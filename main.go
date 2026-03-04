@@ -3,16 +3,20 @@ package main
 import (
 	"os"
 
+	"github.com/ros-e/kuro/cmd"
+	"github.com/ros-e/kuro/internal"
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "kuro",
-	Short: "Self-Hosted PaaS alternative to Vercel and Heroku",
+	Use:     "kuro",
+	Short:   "Self-Hosted PaaS alternative to Vercel and Heroku",
+	Version: internal.Version,
 }
 
 func init() {
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	rootCmd.PersistentFlags().BoolP("verbose", "v", false, "Enable verbose output")
+	rootCmd.AddCommand(cmd.SetupCmd)
 }
 
 func main() {
