@@ -1,7 +1,5 @@
 package internal
 
-var RootConfigPath = "/etc/kuro/config.yaml"
-
 type Provider string
 type Trigger string
 
@@ -22,7 +20,8 @@ type RootConfig struct {
 }
 
 type ProjectEntry struct {
-	Dir string `yaml:"dir"`
+	Name string `yaml:"name"`
+	Dir  string `yaml:"dir"`
 }
 
 type ProjectConfig struct {
