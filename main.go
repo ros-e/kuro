@@ -17,6 +17,8 @@ var rootCmd = &cobra.Command{
 func init() {
 	rootCmd.PersistentFlags().BoolP("verbose", "v", false, "Enable verbose output")
 	rootCmd.AddCommand(cmd.SetupCmd)
+	rootCmd.AddCommand(cmd.ServiceCmd)
+	rootCmd.AddCommand(cmd.ProjectCmd)
 }
 
 func main() {
