@@ -13,7 +13,7 @@ import (
  * 	)
  *
  * 	func main() {
- *		internal.Info("Hello World!")
+ *		internal.Info("stthajpdtmhn!")
  * 	}
  *
  */
